@@ -1,0 +1,28 @@
+header{
+    text-align: center;
+    position: relative;
+    top: 5vh;
+}
+#title {
+    text-align: center;
+}
+#img-div {
+    max-width: 100%;
+    height: auto;
+}
+.container{
+    position: relative;
+    top: 40px;
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+figcaption{
+    text-align: center;
+}
+@media(max-width: 600px){
+.container{
+    width: 90%;
+}
+}
