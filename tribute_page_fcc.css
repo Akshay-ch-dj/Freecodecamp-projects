@@ -21,8 +21,31 @@ header{
 figcaption{
     text-align: center;
 }
+
+.section-head{
+    text-align: center;
+}
+
+#tribute-info{
+    margin: auto;
+    /* position: relative; */
+    padding-top: 20vh;
+    width: 50%;
+    /* text-align: center; */
+}
+
+#end_para{
+    /* display: flex; */
+    margin: auto;
+    text-align: justify;
+}
 @media(max-width: 600px){
 .container{
     width: 90%;
 }
+}
+footer{
+    position: relative;
+    padding-top: 20%;
+    text-align: center;
 }
