@@ -1,51 +1,131 @@
+html{
+    font-size: 10px;
+}
 header{
     text-align: center;
+    
     position: relative;
     top: 5vh;
 }
+body{
+    line-height: 1.5;
+    color: #333;
+}
+#main{
+    /* background: linear-gradient(180deg, rgba(238, 236, 236, 0.822), rgba(80, 73, 87, 0.74), 
+    rgba(192, 234, 245, 0.699)); */
+    background: rgba(128, 128, 128, 0.279);
+    border-radius: 0.5rem;
+}
 #title {
     text-align: center;
+    font-size: 5rem;
+    font-family: 'Lobster', cursive;
 }
-#img-div {
+#title-sub{
+    font-family: 'Epilogue', sans-serif;
+    font-size: 2.2rem;
+}
+#img-div{
+    background: linear-gradient(90deg, rgb(130,130,130), rgb(254,254,254)); 
+    padding: 1rem 10rem 1rem 10rem;
+    margin-top: 10vh;
+    /* border-radius: 0.5rem; */
+    box-shadow: 0px 0px 5px 10px rgba(37, 37, 37, 0.105);
+    transition: transform 250ms linear;
+}
+#img-div:hover{
+    transform: scale(1.05);
+}
+#image {
+    display: block;
     max-width: 100%;
     height: auto;
+    margin: 0 auto;
+    border-radius: 0.1rem;
 }
-.container{
-    position: relative;
-    top: 40px;
-    width: 70%;
-    height: auto;
-    display: block;
-    margin: auto;
-}
-figcaption{
+
+#img-caption{
     text-align: center;
+    margin: 1rem 0 1rem 0;
+    font-size: 1.7rem;
+    font-family: 'Epilogue', sans-serif;
 }
 
 .section-head{
     text-align: center;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 2.4rem;
 }
 
+ul strong{
+    font-weight: bolder;
+}
 #tribute-info{
     margin: auto;
-    /* position: relative; */
-    padding-top: 20vh;
-    width: 50%;
-    /* text-align: center; */
+    width: 60%;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1.5rem;
 }
 
-#end_para{
-    /* display: flex; */
+#end-para-box{
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 80%;
+    height: 22vh;
+    margin: auto;
+    padding: 2%;
+}
+#end-para{
     margin: auto;
     text-align: justify;
-}
-@media(max-width: 600px){
-.container{
-    width: 90%;
-}
+    font-family: 'Epilogue', sans-serif;
+    width: 95%;
+    font-size: 1.7rem;
+    font-weight: 700;
 }
 footer{
-    position: relative;
-    padding-top: 20%;
+    padding-top: 5vh;
+    padding-bottom: 3vh;
     text-align: center;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1.35em;
+    font-weight: bolder;
+    font-style: italic;
+}
+@media(max-width: 800px){
+#title {
+    font-size: 4rem;
+}
+#title-sub{
+    font-size: 1.9rem;
+}
+#img-div{ 
+    padding: 0.4rem 1rem 0rem 1rem;
+    box-shadow: 0px 0px 4px 6px rgba(37, 37, 37, 0.105);
+}
+#img-caption{
+    margin: 0;
+    font-size: 1.2rem;
+}
+.section-head{
+    font-size: 1.8rem;
+}
+#tribute-info{
+    width: 75%;
+    font-size: 1.4rem;
+}
+#end-para-box{
+    width: 90%;
+}
+#end-para{
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+footer{
+    margin: 0;
+    padding-top: 11vh;
+    padding-bottom: 3vh;
+    font-size: 1.35em;
+}
 }
