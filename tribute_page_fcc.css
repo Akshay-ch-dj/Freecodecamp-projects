@@ -1,30 +1,61 @@
 html{
     font-size: 10px;
 }
-header{
-    text-align: center;
+
+/* Background animation effect */
+.bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  /* radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
+  background: radial-gradient(
+    ellipse at bottom,  
+    #f1f4f0cb 0, #767d74a2, 
+    #aba88baf, #78777dce, 
+    #9b7064ab, #53637793, 
+    #f8f6eea6, #9fbed9b9 100%);
+  background-repeat: no-repeat;
+  background-size: 1000% 1000%;
+  animation: gradient 300s ease infinite;
+}
     
+@keyframes gradient { 
+  0%{background-position:0% 0%}
+  50%{background-position:100% 100%}
+  100%{background-position:0% 0%}
+}
+
+/* ****End of animations***** */
+
+header{
+    text-align: center;   
     position: relative;
     top: 5vh;
 }
 body{
     line-height: 1.5;
-    color: #333;
+    color: rgba(0, 0, 0, 0.856);
 }
 #main{
     /* background: linear-gradient(180deg, rgba(238, 236, 236, 0.822), rgba(80, 73, 87, 0.74), 
     rgba(192, 234, 245, 0.699)); */
-    background: rgba(128, 128, 128, 0.279);
+    /* background: rgba(128, 128, 128, 0.279); */
+    /* background-image: radial-gradient(circle closest-side, #00bffb, rgba(0, 0, 0, 1)); */
     border-radius: 0.5rem;
 }
 #title {
     text-align: center;
     font-size: 5rem;
     font-family: 'Lobster', cursive;
+    text-shadow: 3px 0px 5px rgba(115, 114, 109, 0.92);
 }
 #title-sub{
     font-family: 'Epilogue', sans-serif;
     font-size: 2.2rem;
+    text-shadow: 4px 3px 10px rgba(166, 164, 157, 0.973);
 }
 #img-div{
     background: linear-gradient(90deg, rgb(130,130,130), rgb(254,254,254)); 
@@ -69,9 +100,8 @@ ul strong{
 }
 
 #end-para-box{
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.082);
     width: 80%;
-    height: 22vh;
     margin: auto;
     padding: 2%;
 }
@@ -83,14 +113,14 @@ ul strong{
     font-size: 1.7rem;
     font-weight: 700;
 }
-footer{
-    padding-top: 5vh;
-    padding-bottom: 3vh;
+#footer-text{
     text-align: center;
     font-family: 'Epilogue', sans-serif;
     font-size: 1.35em;
     font-weight: bolder;
     font-style: italic;
+    padding-top: 1%;
+    padding-bottom: 2%;
 }
 @media(max-width: 800px){
 #title {
@@ -122,10 +152,7 @@ footer{
     font-size: 1.6rem;
     font-weight: 600;
 }
-footer{
-    margin: 0;
-    padding-top: 11vh;
-    padding-bottom: 3vh;
-    font-size: 1.35em;
+#footer-text{
+    font-size: 1.2em;
 }
 }
