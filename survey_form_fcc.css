@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Satisfy&display=swap");
-/* <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet"> */
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Lato:ital@1&family=Satisfy&display=swap");
 /* font-family: 'Cabin', sans-serif;
+font-family: 'Lato', sans-serif;
 font-family: 'Satisfy', cursive; */
 :root {
   --color-white: #f3f3f3;
@@ -14,6 +14,97 @@ font-family: 'Satisfy', cursive; */
 *::after {
   box-sizing: border-box;
 }
+
+/* ******************* Blue circle animation *************** */
+.flame-bg {
+  background-color: rgba(0, 0, 0, 0);
+  position: fixed;
+  margin: auto;
+  top: 10%;
+  left: 20%;
+  width: 100%;
+  height: 100%; 
+  z-index: -1;
+}
+.circle-main-center {
+  width: 7rem;
+  height: 10rem;
+  top: 24%;
+  left: 42%;
+  position: absolute;
+  box-shadow: 9rem 7rem 5rem rgba(40, 0, 0, 0.3);
+  border-right: 50%;
+  z-index: 10;
+}
+.circle-wrap {
+  width: 12rem;
+  height: 15rem;
+  top: -5%;
+  left: 35%;
+  position: absolute;
+  opacity: 0.7;
+  animation: wigling-small 2.2s linear infinite reverse;
+  box-shadow: 15rem 12rem 5rem rgba(66, 206, 248, 0.582);
+  border-radius: 50%;
+}
+/* rgba(255, 100, 0, 0.5); rgba(66, 206, 248, 0.582)*/
+.circle-main-bottom {
+  width: 12rem;
+  height: 12rem;
+  top: 5%;
+  left: 35%;
+  position: absolute;
+  box-shadow: 15rem 12rem 7rem rgba(0, 170, 255, 0.6);
+  border-radius: 50%;
+}
+.circle-main-upper {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 40%;
+  opacity: 0.5;
+  top: 10%;
+  left: 45%;
+  position: absolute;
+  transform: translate(10rem, 10rem);
+  animation: wigling 0.8s ease-in-out infinite;
+  box-shadow: 9rem 7rem 7rem rgba(252, 202, 0, 0.596);
+  border-right: 50%;
+}
+@keyframes wigling {
+  0%{
+    transform: translate(-25%, 0);
+  }
+  25%{
+    transform: translate(0, -25%);
+  }
+  50%{
+    transform: translate(25%, 0);
+  }
+  75%{
+    transform: translate(0, 25%);
+  }
+  100% {
+    transform: translate(-25%, 0);
+  }
+}
+@keyframes wigling-small {
+  0%{
+    transform: translate(-10%, 0);
+  }
+  25%{
+    transform: translate(0, -10%);
+  }
+  50%{
+    transform: translate(10%, 0);
+  }
+  75%{
+    transform: translate(0, 10%);
+  }
+  100% {
+    transform: translate(-10%, 0);
+  }
+}
+/* ******************* End of animation ************** */
 
 body {
   font-family: 'Cabin', sans-serif;
@@ -32,51 +123,87 @@ body::before {
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: -1;
+  z-index: -2;
   background: var(--color-darkblue);
   background-image:linear-gradient(
       115deg,
-      rgba(12, 12, 20, 0.8),
-      rgba(0, 0, 0, 0.836)
+      rgba(12, 12, 20, 0.733),
+      rgba(0, 0, 0, 0.849)
     ),
-    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+    url("./images/meditation_form_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 h1{
+    margin-top: 0;
+    margin-bottom: 0.5rem;
     font-family: 'Satisfy', cursive;
     font-size: 3rem;
     text-align: center;
-    background: linear-gradient(to right, rgb(255, 178, 12), rgba(255, 213, 97, 0.993), 
-    rgba(223, 170, 26, 0.897));
+    background: linear-gradient(to right, #ffee00, #fff568, 
+    #ffebd5ea);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 4px 1px 4px rgba(75, 74, 69, 0.92);
 }
 
+.main-head{
+  text-align: center;
+  
+}
+
 h3{
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.7rem;
+    font-style: italic;
+    background: linear-gradient(to right, #ffee00, #fff568, 
+    #ffebd5ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#work-status{
+  font-family: 'Cabin', sans-serif;
 }
 
 p {
   font-size: 1.125rem;
+  font-family: 'Lato', sans-serif;
 }
 
-h1,
 p {
   margin-top: 0;
   margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: rgb(255, 242, 225);
 }
 
 label {
   display: flex;
+  flex-direction: row;
   align-items: center;
   font-size: 1.125rem;
   margin-bottom: 0.5rem;
 }
+
+/*  CSS hack to get "gap" feature of flexbox in all browsers */
+.age-group{
+  display: inline-flex;
+  flex-wrap: wrap;
+  --gap: 15px; /* variable gap defined*/
+  margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+  width: calc(100% + var(--gap));
+}
+
+/* To all children elements in age-group */
+.age-group > * {
+  margin: var(--gap) 0 0 var(--gap);
+}
+/* *********************************************************** */
 
 input,
 button,
@@ -94,7 +221,7 @@ button {
 
 .container {
   width: 100%;
-  margin: 3.125rem auto 0 auto;
+  margin: 3.1rem auto 0 auto;
 }
 
 @media (min-width: 576px) {
@@ -191,4 +318,23 @@ form {
   color: inherit;
   border-radius: 2px;
   cursor: pointer;
+}
+
+.radio-input-familiarity, 
+.radio-input-religious_practice,
+.radio-input-spent_time,
+.radio-input-heard_about,
+.checkbox-input-expectation,
+.radio-input-indoor-outdoor,
+.radio-input-tech-aid,
+.checkbox-input-experience,
+.checkbox-input-excuses {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 5vh;
+  color: rgba(240, 248, 255, 0.733);
+}
+
+#thank-you{
+  text-align: center;
 }

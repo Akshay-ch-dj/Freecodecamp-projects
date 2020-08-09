@@ -7,6 +7,16 @@
     <title>Survey Form</title>
 </head>
 <body>
+
+<!-- animation body -->
+<div class="flame-bg">
+    <div class="circle-main-bottom"></div>
+    <div class="circle-main-center"></div>
+    <div class="circle-main-upper"></div>
+    <div class="circle-main-top"></div>
+    <div class="circle-wrap"></div>
+</div>
+
     <div class="container">
     <!-- Header for the survey -->
     <header class="main-head">
@@ -14,7 +24,7 @@
         <h3>Survey Form</h3>
         <p id="description">Thank you for taking the time to express your thoughts about 
             meditation</p>
-        <p id="sub-description">It only takes less than 5 minutes</p>
+        <p id="sub-description">It only takes 5 minutes</p>
     </header>
 
     <!-- The main form page -->
@@ -43,7 +53,9 @@
         </div>
 
         <div class="form-element">
-            <label id="number-label" for="age">Age<span class="clue"></span></label>
+            <label id="number-label" for="age">Age<span class="clue">(enter or select a 
+                group)</span></label>
+        <div class="age-group">
             <input 
                 id="age" 
                 type="number" 
@@ -67,10 +79,11 @@
                 <input name="age-group" type="radio" id="age-group5" class="input-radio" 
                 value="61-100">above 61</label>
         </div>
+        </div>
 
         <div class="form-element">
             <label for="gender" id="gender-label">Gender</label>
-            <select name="gender" id="gender" required> 
+            <select name="gender" id="gender" class="form-control" required> 
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="third-gender">Non-binary/Third gender</option>
@@ -352,8 +365,8 @@
         </div>
 
         <div class="form-element">
-            <p>Which option best describes your work status</p>
-            <select name="work-status" id="dropdown" required>
+            <p id="work-status">Which option best describes your work status</p>
+            <select name="work-status" id="dropdown" class="form-control" required>
                 <option disabled selected value>Select your work-status.</option>
                 <option value="student">Studying</option>
                 <option value="Employee">Employed</option>
@@ -368,8 +381,11 @@
                 <option value="Other">Other</option>
             </select>
         </div>
-
+        <br>
+        <br>
+        
         <!-- Meditation related questions -->
+
         <div class="form-element">
             <p>Your familiarity with meditation</p>
             <div class="radio-input-familiarity">
@@ -600,7 +616,7 @@
         </div>
 
         <div class="form-element">
-            <p>If you are meditated(even once) any time in your life, 
+            <p>If you have meditated(even once) any time in your life, 
                 describe your experience(check all that apply).</p>
             <div class="checkbox-input-experience">
                 <label>
@@ -662,11 +678,6 @@
                     <input type="checkbox" name="expectation" value="boring" 
                     class="input-checkbox">
                     Boring
-                </label>
-                <label>
-                    <input type="checkbox" name="expectation" value="awakening" 
-                    class="confusing">
-                    Confusing
                 </label>
                 <label>
                     <input type="checkbox" name="expectation" value="useful" 
