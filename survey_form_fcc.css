@@ -157,13 +157,13 @@ h1{
 h3{
     font-weight: 600;
     line-height: 1.2;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 1.7rem;
-    font-style: italic;
     background-clip: border-box;
-    background: linear-gradient(to right, #ffee00, #fff568, #ffebd5ea);
+    background: linear-gradient(120deg, #55c6d1, #4e7db1, #30657a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.92);
 }
 
 #work-status{
@@ -335,6 +335,74 @@ form {
   color: rgba(240, 248, 255, 0.733);
 }
 
-#thank-you{
+.end-para{
   text-align: center;
+  font-size: 0.8rem;
+  font-family: 'Cabin', sans-serif;
+  opacity: 0.7;
 }
+
+/* ############################################ */
+/* Credits: https://codepen.io/axelaredz/pen/yijwL */
+
+.thankyou-anim{
+  background: #ccd0d400;
+}
+h3.load{
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
+  color: transparent;
+  letter-spacing: 0.01em;
+}
+.load span{
+  text-shadow:
+    0 0 2px rgba(204, 208, 212,0.9),
+    0 15px 25px rgba(0, 0, 0, 0.3),
+    0 -2px 3px rgba(0, 0, 0, 0.1),
+    0 -5px 10px rgba(255, 255, 255, 0.5),
+    0 5px 10px rgba(0, 0, 0, 0.3),
+    0 3px 4px rgba(255, 255, 255, 0.2),
+    0 0 20px rgba(255, 255, 255, 0.45);
+  
+    animation: loading 1.20s ease-in-out infinite alternate;
+}
+
+@keyframes loading {
+	to {text-shadow:
+    0 0 2px rgba(204, 208, 212,0.2),
+    0 0 3px rgba(0, 0, 0, 0.02),
+    0 0 0 rgba(0, 0, 0, 0),
+    0 0 0 rgba(255, 255, 255, 0),
+    0 0 0 rgba(0, 0, 0, 0),
+    0 0 0 rgba(255, 255, 255, 0),
+    0 0 0 rgba(255, 255, 255, 0);}
+}
+
+.load span:nth-child(2){
+  animation-delay:0.15s;
+}
+.load span:nth-child(3){
+  animation-delay:0.30s;
+}
+.load span:nth-child(4){
+  animation-delay:0.45s;
+}
+.load span:nth-child(5){
+  animation-delay:0.60s;
+}
+.load span:nth-child(6){
+  animation-delay:0.75s;
+}
+.load span:nth-child(7){
+  animation-delay:0.90s;
+}
+.load span:nth-child(8){
+  animation-delay:1.05s;
+}
+.load span:nth-child(9){
+  animation-delay:1.20s;
+}
+
+/* ############################################ */
