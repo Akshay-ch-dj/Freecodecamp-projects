@@ -130,7 +130,7 @@ body::before {
       rgba(12, 12, 20, 0.733),
       rgba(0, 0, 0, 0.849)
     ),
-    url("./images/meditation_form_background.jpg");
+    url(https://github.com/Akshay-ch-dj/Freecodecamp-projects/blob/master/images/meditation_form_background.jpg?raw=true);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -142,8 +142,8 @@ h1{
     font-family: 'Satisfy', cursive;
     font-size: 3rem;
     text-align: center;
-    background: linear-gradient(to right, #ffee00, #fff568, 
-    #ffebd5ea);
+    background-clip: border-box;
+    background: linear-gradient(to right, #ffee00, #fff568, #ffebd5ea);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 4px 1px 4px rgba(75, 74, 69, 0.92);
@@ -160,8 +160,8 @@ h3{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.7rem;
     font-style: italic;
-    background: linear-gradient(to right, #ffee00, #fff568, 
-    #ffebd5ea);
+    background-clip: border-box;
+    background: linear-gradient(to right, #ffee00, #fff568, #ffebd5ea);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
