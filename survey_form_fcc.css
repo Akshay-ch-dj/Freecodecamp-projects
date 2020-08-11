@@ -130,7 +130,7 @@ body::before {
       rgba(12, 12, 20, 0.733),
       rgba(0, 0, 0, 0.849)
     ),
-    url(https://github.com/Akshay-ch-dj/Freecodecamp-projects/blob/master/images/meditation_form_background.jpg?raw=true);
+    url("/images/meditation_form_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
