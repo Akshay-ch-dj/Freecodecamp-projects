@@ -16,7 +16,7 @@
 <body>
     <nav id="navbar">
 
-    <header class="sidebar-header">REFERENCE DOCUMENTATION</header>
+    <header class="sidebar-header">Reference Documentation</header>
 
     <ul class="components">
         <li><a class="nav-link" href="#Introduction">
@@ -43,7 +43,7 @@
             </div>
         </li>
         <li>
-            <a class="dropdown-active nav-link" aria-expanded="false" href="#Bash Scripting">
+            <a class="dropdown-active nav-link" aria-expanded="false" href="#Bash_Scripting">
                 <img class="nav-icon" src="/icons/icons8-console-50.png" alt="#bash icon">
                 Bash Scripting<i class="fa fa-caret-down"></i></a>
             <div class="dropdown-container">
@@ -55,11 +55,15 @@
         <li>
             <a class="dropdown-active nav-link" aria-expanded="false" href="#Javascript">
                 <img class="nav-icon" src="/icons/icons8-javascript-50.png" alt="javascript icon">
-                JavaScript<i class="fa fa-caret-down"></i></a>
+                Javascript<i class="fa fa-caret-down"></i></a>
             <div class="dropdown-container">
-                <a href="#">Link 1</a>
-                <a href="#">Link 3</a>
-                <a href="#">Link 3</a>
+                <a href="#hello_world">Hello World!</a>
+                <a href="#data_structures_and_operators">Data-structures & Operators</a>
+                <a href="#control_flow">Control Flow</a>
+                <a href="#js_functions">JS Functions</a>
+                <a href="#js_arrays">JS Arrays</a>
+                <a href="#js_objects">JS objects</a>
+                <a href="#dom">DOM(Document Object Model)</a>
             </div>
         </li>
         <li>
@@ -191,7 +195,21 @@
                 <a href="#">Link 3</a>
                 <a href="#">Link 3</a>
             </div>
+        <li>
+            <a class="dropdown-active nav-link" aria-expanded="false" href="#editor_perks">
+                <img class="nav-icon" src="/icons/icons8-vsc-atom-sublime-64.png" 
+                alt="#vsc atom icon">
+                Code editor perks<i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-container">
+                <a href="#vsc_extensions">VS code extensions</a>
+                <a href="#vsc_emmets">VS code emmets</a>
+                <a href="#vsc_settings">VS code settings</a>
+            </div>
         </li>
+        </li>
+        <li><a class="nav-link" href="#">
+            </a></li>
+        <li>
         </ul>
     </nav>
 
@@ -200,22 +218,19 @@
             <header>Introduction</header>
             <article>
                 <p>
-                    JavaScript is a cross-platform, object-oriented scripting language. It
-                    is a small and lightweight language. Inside a host environment (for
-                    example, a web browser), JavaScript can be connected to the objects of
-                    its environment to provide programmatic control over them.
+                    This webpage is the collection of all the reference notes by <a href="#">me</a>.
+                    Programming languages include Python, Javascript and bash. Front end frameworks 
+                    including Bootstrap, Jquery and Vue.js. Backend frameworks are Django and Django 
+                    Rest API. Additional tools including git and github, Travis Continuous 
+                    Integration, Docker, Vagrant etc. and some other helping tools.
+                </p>
+                <p>This is only for reference and not gives a whole picture of any technology. So
+                    consider it as a quick check guide, It will be updated constantly and gets
+                    better over time
                 </p>
     
-    
                 <ul>
-                    <li>
-                        Client-side JavaScript extends the core language by supplying objects
-                        to control a browser and its Document Object Model (DOM). For example,
-                        client-side extensions allow an application to place elements on an
-                        HTML form and respond to user events such as mouse clicks, form input,
-                        and page navigation.
-                    </li>
-    
+                    <li></li>
                 </ul>
             </article>
         </section>
@@ -237,34 +252,158 @@
     
             </article>
         </section>
-        <section class="main-section" id="Hello_world">
-            <header>Hello world</header>
+        <section class="main-section" id="Bash_Scripting">
+            <header>Bash Scripting</header>
             <article>
                 To get started with writing JavaScript, open the Scratchpad and write your
                 first "Hello world" JavaScript code:
                 <code>function greetMe(yourName) { alert("Hello " + yourName); }
             greetMe("World");
           </code>
-    
-    
             </article>
         </section>
-        <section class="main-section" id="Variables">
-            <header>Variables</header>
+        <section class="main-section" id="Javascript">
+            <header>Javascript</header>
             <p>
-                You use variables as symbolic names for values in your application. The
-                names of variables, called identifiers, conform to certain rules.
+                Javascript(JS in short) is a cross-platform, object-oriented scripting language. 
+                In web development it is extensively used to add interactive functionality to the
+                web application. All modern browsers run javascript directly( can see it from the
+                "inspect(<kbd>ctrl+shift+I</kbd>)" element from the chrome browser), or can run as 
+                a full ".js" script connected to an html file. Logic applied through JS is used to 
+                change the HTML/CSS properties shown on the page, thereby adds more control and 
+                interaction to web pages.
             </p>
+            <p>According to StackOverflow 2020, JavaScript is the fastest growing and most popular
+                programming language. It can used in web, in mobile applications with 
+                <a href="https://reactnative.dev/">react native</a>, desktop applications with 
+                <a href="https://www.electronjs.org/">electron</a>(applications like VS code, atom, 
+                whatsapp for desktop uses electron framework).
+            </p>
+            <p>There are different versions of JS, the recent and widely supported version is ES6.</p>
+            <p>
+                To start simple scripting in JS, directly go to the chrome's(or any modern browsers)
+                inbuilt console <em>[on chrome: inspect_element <i class="arrow right"></i> console, 
+                or just type <kbd>F12</kbd>]</em>.
+                Don't click on this button to get alerts.
+
+                <img class="img-main" src="https://i.stack.imgur.com/sK877.png" alt="prevent this page from 
+                creating additional dialogs">
+            </p>
+            <article id="hello_world">
+                <h2>Hello World!</h2>
+                <p>Similar to the print() function in python or other languages. JS outputs are 
+                    alerts(which are alerts popup on browser in boxes), also as console.log()(used 
+                    to debug the scripts & to see variables..etc.)
+                </p>
+                    <code>
+                        alert("Hello World!") <br>console.log('Hello World')
+                    </code>
+                <h4>Comments in Javascript</h4>
+                <code>
+                    // anything here is a comment. 
+                </code>
+            </article>
+            <article id="data_structures_and_operators">
+            <h2>Data-structures & Operators</h2>
+                <h3>Basic Data Types</h3>
+                <ol>
+                    <li><h4>Numbers</h4>
+                        <code>
+                            10, -10, 20.2, -13.4
+                        </code>
+                    <p>Javascript treats all these as numbers(regardless of floating point, integers
+                        , negative etc.) </p>
+
+                    <h5>Basic Operations in numbers</h5>
+                    <script src="https://gist.github.com/Akshay-ch-dj/7ac56bf68d99e00c233a73617d9d5d9e.js"></script>
+                    </li>
+
+
+                    <li><h4>Strings</h4>
+                        <code>"Hello World", "10", "-12"
+                        </code>
+                    <p>Which are some example of strings</p>
+
+                    <h5>Basic Operations in strings</h5>
+                    <code>"JS" + " is super cool"</code>
+                    <samp>> "JS is super cool"</samp>
+
+                    <h5>To find length of a string</h5>
+                    <pre><code> > "javascript".length       > 6
+ > "x x".length              > 3 <br>// Whitespace also counts</code></pre>
+                    
+                    <h5>Escape Characters</h5>
+                    <code><strong>\n</strong>  - new-line, <strong>\t</strong>  - tab, <strong>\"</strong>   
+                        - To input quotes</code>
+
+                    <h5>String Indexing</h5>
+                    <pre><code>"hello"[4]   > "o"</code></pre>
+                    </li>
+                    <li>
+                        <h4>Booleans</h4>
+                        <code>true, false</code>
+                        <p>All lower case</p>
+                    </li>
+                    <li>
+                        <h4>Undefined and null</h4>
+                        <code>undefined, null</code>
+                        <p>Special keywords, they convey different meanings.</p>
+                    </li>
+                </ol>
+                <h4>To clear the console</h4>
+                <code>console.clear()       //ore use ctrl+L shortcut.</code>
+                <h4>To output something in to the console</h4>
+                <code>> console.log("Hey I'm in the console")</code>
+                <samp>> Hey I'm in the console</samp>
+
+
+                <h3>Variables</h3>
+                <code>var varName = value; <br>var bankAccount = 100; <br>var deposit = 50; <br>
+                var total = bankAccount + deposit; </code>
+                <samp>> bankAccount <br>> 100 <br>> total <br>> 150</samp>
+                <p>Another example</p>
+                <code>var greeting = "Welcome back "; <br>var name = "Jimmy"; <br>
+                    alert(greeting + name);</code>
+                <samp><p>Will print an "alert"</p></samp>
+                <samp>> "Welcome back Jimmy"</samp>
+                <p>Use camelCase for variable names, <strong>";"</strong>(end semicolons) not 
+                    necessary in modern Javascript, but it is used conventionally.</p>
+                <p>Undefined and null can be distinguished as,</p>
+                <pre><code>var myVariable      // creating a variable, but not given a value.
+var bonus = null;   // Setting "nothing" to this variable on purpose</code></pre>
+                
+                
+                </article>
+            <article id="control_flow">
+                <h2>Control Flow</h2>
+                You can declare a variable in three ways:
+            </article>
+            <article id="js_functions">
+                <h2>JS Functions</h2>
+                You can declare a variable in three ways:
+            </article>
+            <article id="js_arrays">
+                <h2>JS Arrays</h2>
+                You can declare a variable in three ways:
+            </article>
+            <article id="js_objects">
+                <h2>JS objects</h2>
+                You can declare a variable in three ways:
+            </article>
+            <article id="dom">
+                <h2>DOM(Document Object Model)</h2>
+                You can declare a variable in three ways:
+            </article>
     
         </section>
-        <section class="main-section" id="Declaring_variables">
-            <header>Declaring variables</header>
+        <section class="main-section" id="HTML">
+            <header>HTML</header>
             <article>
                 You can declare a variable in three ways:
             </article>
         </section>
-        <section class="main-section" id="Variable_scope">
-            <header>Variable scope</header>
+        <section class="main-section" id="CSS">
+            <header>CSS</header>
             <article>
                 <p>
                     When you declare a variable outside of any function, it is called a
@@ -281,14 +420,14 @@
             defined</code>
             </article>
         </section>
-        <section class="main-section" id="Global_variables">
-            <header>Global variables</header>
+        <section class="main-section" id="Bootstrap">
+            <header>Bootstrap</header>
             <article>
     
             </article>
         </section>
-        <section class="main-section" id="Constants">
-            <header>Constants</header>
+        <section class="main-section" id="Jquery">
+            <header>Jquery</header>
             <article>
                 <p>
                     You can create a read-only, named constant with the const keyword. The
@@ -299,6 +438,229 @@
     
                 <code>const PI = 3.14;</code>
     
+            </article>
+        </section>
+        <section class="main-section" id="Vue_JS">
+            <header>Vue.js</header>
+            <article>
+                <p>
+                    You can create a read-only, named constant with the const keyword. The
+                    syntax of a constant identifier is the same as for a variable
+                    identifier: it must start with a letter, underscore or dollar sign and
+                    can contain alphabetic, numeric, or underscore characters.
+                </p>
+        
+                <code>const PI = 3.14;</code>
+        
+            </article>
+        </section>
+        <section class="main-section" id="Django">
+            <header>Django</header>
+            <article>
+                <p>
+                    You can create a read-only, named constant with the const keyword. The
+                    syntax of a constant identifier is the same as for a variable
+                    identifier: it must start with a letter, underscore or dollar sign and
+                    can contain alphabetic, numeric, or underscore characters.
+                </p>
+        
+                <code>const PI = 3.14;</code>
+        
+            </article>
+        </section>
+        <section class="main-section" id="Django_REST">
+            <header>Django REST API</header>
+            <article>
+                <p>
+                    You can create a read-only, named constant with the const keyword. The
+                    syntax of a constant identifier is the same as for a variable
+                    identifier: it must start with a letter, underscore or dollar sign and
+                    can contain alphabetic, numeric, or underscore characters.
+                </p>
+        
+                <code>const PI = 3.14;</code>
+        
+            </article>
+        </section>
+        <section class="main-section" id="JSON">
+            <header>JSON</header>
+            <article>
+                <p>
+                    You can create a read-only, named constant with the const keyword. The
+                    syntax of a constant identifier is the same as for a variable
+                    identifier: it must start with a letter, underscore or dollar sign and
+                    can contain alphabetic, numeric, or underscore characters.
+                </p>
+        
+                <code>const PI = 3.14;</code>
+        
+            </article>
+        </section>
+        <section class="main-section" id="Git_and_github">
+            <header>Git & Github</header>
+            <article>
+                <p>
+                    You can create a read-only, named constant with the const keyword. The
+                    syntax of a constant identifier is the same as for a variable
+                    identifier: it must start with a letter, underscore or dollar sign and
+                    can contain alphabetic, numeric, or underscore characters.
+                </p>
+        
+                <code>const PI = 3.14;</code>
+        
+            </article>
+        </section>
+        <section class="main-section" id="Docker">
+            <header>Docker</header>
+            <article>
+                <p>
+                    You can create a read-only, named constant with the const keyword. The
+                    syntax of a constant identifier is the same as for a variable
+                    identifier: it must start with a letter, underscore or dollar sign and
+                    can contain alphabetic, numeric, or underscore characters.
+                </p>
+        
+                <code>const PI = 3.14;</code>
+        
+            </article>
+        </section>
+        <section class="main-section" id="Vagrant">
+            <header>Vagrant</header>
+            <article>
+                <p>
+                    You can create a read-only, named constant with the const keyword. The
+                    syntax of a constant identifier is the same as for a variable
+                    identifier: it must start with a letter, underscore or dollar sign and
+                    can contain alphabetic, numeric, or underscore characters.
+                </p>
+        
+                <code>const PI = 3.14;</code>
+        
+            </article>
+        </section>
+        <section class="main-section" id="Travis_CI">
+            <header>Travis CI</header>
+            <article>
+                <p>
+                    You can create a read-only, named constant with the const keyword. The
+                    syntax of a constant identifier is the same as for a variable
+                    identifier: it must start with a letter, underscore or dollar sign and
+                    can contain alphabetic, numeric, or underscore characters.
+                </p>
+        
+                <code>const PI = 3.14;</code>
+        
+            </article>
+        </section>
+        <section class="main-section" id="Markdown_Text">
+            <header>Markdown Text</header>
+            <article>
+                <p>
+                    You can create a read-only, named constant with the const keyword. The
+                    syntax of a constant identifier is the same as for a variable
+                    identifier: it must start with a letter, underscore or dollar sign and
+                    can contain alphabetic, numeric, or underscore characters.
+                </p>
+        
+                <code>const PI = 3.14;</code>
+        
+            </article>
+        </section>
+        <section class="main-section" id="editor_perks">
+            <header>Code editor perks</header>
+            <a href="#vsc_extensions">VS code extensions</a>
+            <a href="#vsc_emmets">VS code emmets</a>
+            <a href="#vsc_settings">VS code settings</a>
+            <article id="vsc_extensions">
+                <p>
+                    Visual Studio Code is an amazing code editor from microsoft, ie open source,
+                    comes with great community support and great extensions.
+                </p>
+                <h2>VS code extensions</h2>
+                <p>These are the extensions I'm personally using and its settings.</p>
+                <ol>
+                    <h3>Visual Extensions</h3>
+                    <li><h4>Prettier: formats the code make it prettier</h4>
+                        <p>In settings(<kbd>ctrl+,</kbd>), search for "format on save": check it to
+                        automatically format on every save. Also, there is lot of settings that can 
+                        be set based on personal preferences. </p>
+                    </li>
+                    <li><h4>Bracket Pair Colorizer 2: The version 2 of em.</h4>
+                        <p>The version 2 uses same parsing engine of VS code, that increases speed 
+                            and accuracy.</p></li>
+                    <li><h4>Indent-rainbow: Add colors to the margin.</h4></li>
+                </ol>
+                <ol>
+                    <h3>Functional Extensions</h3>
+                    <li><h4>Auto Rename Tag: Change the beginning tag, end gets automatically 
+                        changed (html/xml)</h4></li>
+                    <li><h4>Code Spell Checker: Spelling checker for source code</h4>
+                        <p>It comes handy when editing html, for quick suggestions use: 
+                            <kbd>ctrl+.</kbd></p>
+                    </li>
+                    <li><h4>HTML CSS support: class completions to html</h4>
+                        <p>For eg.: To add a new div with the already defined class 
+                            name("my_classname"), just start typing ".my-" then the class will be
+                            in the suggestions, hit "tab" to create automatically.</p></li>
+                    <li><h4>Rest Client: See the backend API responses</h4>
+                        <p>Similar to the "postman" program. make a http file and type in the 
+                            requests, then send the request, that automatically opens the response 
+                            window on side with all the details and returned data. Also can have 
+                            multiple requests(separate them with triple hash tags(###)).</p>
+                    </li>
+                    <li><h4>Live Server: Creates a Local dev server with live reloading</h4>
+                        <p>From any html/template files hit the "Go live" button on bottom, it 
+                            automatically refreshes the new content.</p>
+                    </li>
+                    <li><h4>CSS peek: peek the css definitions from html file.</h4>
+                        <p>Just hover over a class/id to peak the css, click it to go directly to 
+                            that css class(in a new temporary window), multiple definitions also 
+                            shows up.</p></li>
+                    <li><h4>Live Sass Compiler: will compile sass to css</h4>
+                        <p>Go to settings of live sass compiler, locate 
+                            "liveSassCompile.settings.formats:" in the json, for production 
+                            environment set the <u>format</u> to <u>compressed</u>, 
+                            <u>extensionName</u> to <u>.min.css</u> going to minify and compress 
+                            the css files automatically. Can also set the <u>savePath</u>
+                            (/dist/css), also set the <u>liveSassCompile.settings.generateMap</u> 
+                            to <u>false</u>.
+                        </p>
+                        <p>When a new "scss" file created with sass styling, then hit the "watch 
+                            sass" button on bottom, it compiles the sass into normal css and save 
+                            it in the set path(here: on /dist/css/) </p>
+                    </li>
+                        
+                </ol>
+                
+            </article>
+            <article id="vsc_emmets">
+                <h2>VS code emmets</h2>
+                <p>
+                    Emmet helps drastically speed up the rate of writing the markup.
+                </p>
+                <ul>
+                    <li>"!": just type the exclamation mark and hit <kbd>tab</kbd> to create an
+                    html5 boilerplate automatically. Change the contents in the  highlighted areas 
+                    using <kbd>tab</kbd> to switch.</li>
+                    <li>To create an "ul" skelton with 5 "li" elements: use <kbd>ul>li*5</kbd></li>
+                    <li><kbd>button#email-me</kbd>: To create "button" with id="email-me", similarly
+                    <kbd>p.main-content</kbd>: creates a paragraph with class="main-content"</li>
+                    <li><kbd>lorem30</kbd>: Just gives the first 30 words of lorem ipsum.</li>
+                    <li></li>
+                </ul>
+            
+            </article>
+            <article id="vsc_settings">
+                <h2>VS code settings</h2>
+                <p>
+                    You can create a read-only, named constant with the const keyword. The
+                    syntax of a constant identifier is the same as for a variable
+                    identifier: it must start with a letter, underscore or dollar sign and
+                    can contain alphabetic, numeric, or underscore characters.
+                </p>
+            
+                <code>const PI = 3.14;</code>
+            
             </article>
         </section>
     </main>
