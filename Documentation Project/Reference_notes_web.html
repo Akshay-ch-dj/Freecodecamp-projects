@@ -10,7 +10,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/Reference_notes_web.css">
+    <link rel="stylesheet" href="/Documentation Project/Reference_notes_web.css">
 
 </head>
 <body>
@@ -731,44 +731,6 @@ var bonus = null;   // Setting "nothing" to this variable on purpose</code></pre
         </section>
     </main>
 
-
-<!-- Javascript for dropdown-sidebar -->
-<script>
-    //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown 
-    //  content - This allows the user to have multiple dropdowns without any conflict */
-    var dropdown = document.getElementsByClassName("dropdown-active");
-    var i;
-
-    for (i = 0; i < dropdown.length; i++) {
-        dropdown[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            var dropdownContent = this.nextElementSibling;
-            if (dropdownContent.style.display === "block") {
-                dropdownContent.style.display = "none";
-            } else {
-                dropdownContent.style.display = "block";
-            }
-        });
-    }
-
-    // When the page moving down..(ie user scrolls up to the top of the page), slide down the navbar
-    // When the page moving up..(scrolling down/reading), slide up the navbar (275px out of the top view)
-    
-    var prevScrollpos = window.pageYOffset;
-        
-    window.onscroll = function () {
-        var currentScrollPos = window.pageYOffset;
-        if (window.matchMedia("(max-width: 815px)").matches) {
-            /*only works when the viewport is at most 815 pixels wide */
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("navbar").style.top = "0";
-            } else {
-                document.getElementById("navbar").style.top = "-275px";
-            }
-            prevScrollpos = currentScrollPos;
-        }
-    }
-</script>
-
+    <script src="/Documentation Project/Reference_notes_web.js"></script>
 </body>
 </html>
