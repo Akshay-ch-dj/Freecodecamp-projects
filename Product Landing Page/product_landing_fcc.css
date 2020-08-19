@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(194, 189, 189, 0.719);
+    min-height: 10vh;
+    font-family: 'PT Serif', serif;
+}
+
+#header1{
+    margin-right: 30%;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+    margin-left: 10%;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: black;
+    letter-spacing: 0.05rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 24px;
+    height: 3px;
+    margin: 4px;
+    background-color: black;
+    box-shadow: 2px 1px 3px 1px rgba(122, 119, 119, 0.452), 
+                -2px 1px 3px 1px rgba(122, 119, 119, 0.452);
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px){
+    #header1{
+        margin-right: 20%;
+    }
+    .nav-links{
+        width: 42%;
+        margin-left: 5%;
+    }
+
+@media screen and (max-width: 768px){
+    body{
+        /* cancel the horizontal scroll */
+        overflow-x: hidden;
+    }
+    #header1{
+        margin: 0;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 90vh;
+        top: 10vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(194, 189, 189, 0.719);
+        width: 50%;
+        /* Transform the whole container in +x dir. */
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .burger{
+        display: block;
+    }
+
+    .nav-links li{
+        /* for transitions */
+        opacity: 0;
+    }
+}
+
+.nav-active{
+    /* The transition is put back translateX to 0 and opacity back*/
+    transform: translateX(0%);
+}
+
+/* Nav animations */
+@keyframes navAnimation{
+    /* opacity 0-1 gradually */
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* burger animation class*/
+.b-transform .burger-line1{
+    transform: translate(-11px, 7px) rotate(45deg) scale(0.35, 1.1);
+    margin-top: 5px;
+    border-radius: 30%;
+    box-shadow: 2px -2px 5px 1px rgba(114, 111, 111, 0.507), 
+                3px -1px 6px 1px rgba(122, 119, 119, 0.322);
+}
+.b-transform .burger-line2{
+    transform: translate(-20px, 3px) rotate(45deg) scale(0.8, 1.2);
+    margin-top: 5px;
+    border-radius: 20%;
+    box-shadow: 2px -2px 5px 1px rgba(114, 111, 111, 0.507), 
+                3px -1px 6px 1px rgba(122, 119, 119, 0.322);
+}
+.b-transform .burger-line3{
+    transform: translate(-30px, 0px) rotate(45deg) scale(1.25, 1.3);
+    margin-top: 5px;
+    border-radius: 10%px;
+    box-shadow: 2px -2px 5px 1px rgba(114, 111, 111, 0.507), 
+                3px -1px 6px 1px rgba(122, 119, 119, 0.322);
+}
