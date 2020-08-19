@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- custom css -->
     <link rel="stylesheet" href="/Product Landing Page/product_landing_fcc.css">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" 
     rel="stylesheet">
@@ -36,19 +42,37 @@
     </header>
 
 
+    <div class="page-content">
+        
+    </div>
     <iframe id="video" src="" frameborder="0"></iframe>
-    <form action="" id="email">
-        <label for="email_field"></label>
-        <input type="email" name="email" id="email-field" 
-        placeholder="Enter Your email">
-        <button onclick="" id="submit">Submit</button>
-    </form>
+    
 
 
     <footer>
-        <div class="foot-about"></div>
-        <div class="foot-connect"></div>
-        <div class="foot-contact"></div>
+        <div class="footer-container">
+            <div class="footer-left">
+                <img id="footer-logo" src="#" alt="company logo small">
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p class="footer-left-text">&copy; 2020 created by: akshaych.dev@gmail.com</p>
+            </div>
+            <div class="footer-right">
+                <h2>Book today!</h2>
+                <div class="footer-border"></div>
+                <p>Enter your email, we will get you back</p>
+                <form action="" id="email">
+                    <input type="email" name="email" id="email-field" placeholder="Enter Your email">
+                    <button type="submit" id="btn-submit">Submit</button>
+                    <!-- <button onclick="" id="submit">Submit</button> -->
+                </form>
+            </div>
+        </div>
     </footer>
 
  

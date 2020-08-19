@@ -4,7 +4,16 @@
     box-sizing: border-box;
 }
 
+/* #############   Navbar part  ############ */
+
 nav{
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.nav-bar{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -60,6 +69,7 @@ nav{
         width: 42%;
         margin-left: 5%;
     }
+}
 
 @media screen and (max-width: 768px){
     body{
@@ -133,4 +143,146 @@ nav{
     border-radius: 10%px;
     box-shadow: 2px -2px 5px 1px rgba(114, 111, 111, 0.507), 
                 3px -1px 6px 1px rgba(122, 119, 119, 0.322);
+}
+
+
+
+.page-content{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* #############  Footer Part  ################### */
+
+footer{
+    margin: auto;
+    width: 100%;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'PT Serif', serif;
+    height: auto;
+    flex-wrap: wrap-reverse;
+    background-color: rgba(194, 189, 189, 0.719);
+    padding-bottom: 5vh;
+}
+
+.footer-left{
+    margin: 2% 0 2% 5%;
+}
+
+.footer-logo{
+    width: 180px;
+    height: auto;
+}
+
+.social-media{
+    padding: 5vh 0 0 0;
+}
+
+.social-media a{
+    margin: 5px;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    transition: 0.2s linear;
+}
+
+.social-media a:hover{
+    color: rgb(252, 24, 119);
+}
+
+.footer-left-text{
+    padding: 5vh 0 0 0;
+    font-size: 0.8rem;
+    color: rgba(128, 128, 128, 0.973);
+}
+
+.footer-right{
+    margin: 2% 5% 2% 0;
+}
+
+.footer-right h2{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-bottom: 4%;
+}
+
+.footer-right p{
+    font-size: 1.1rem;
+    margin-left: 10px;
+}
+
+.footer-border{
+    height: 2px;
+    width: 96%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 2%;
+}
+
+#email{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2%
+}
+
+#email-field{
+    flex: 1;
+    padding: 5px 35px 5px 8px;
+    font-size: 1.4rem;
+    color: rgb(0, 0, 0);
+    border: none;
+    background: rgba(121, 119, 119, 0.425);
+    outline: none;
+    border-radius: 20px;
+    font-weight: 600;
+    min-width: 260px;
+}
+
+#btn-submit{
+    padding: 5px 15px 5px 15px;
+    font-size: 1.3rem;
+    color: rgb(0, 0, 0);
+    border: none;
+    background: rgba(121, 119, 119, 0.425);
+    outline: none;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: opacity 0.3s linear;
+}
+
+#btn-submit:hover{
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 960px) {
+    .footer-container{
+        max-width: 100%;
+    }
+
+    .footer-right{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    .footer-left{
+        width: 100%;
+        text-align: center;
+    }
 }
