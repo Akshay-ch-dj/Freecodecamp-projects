@@ -7,7 +7,6 @@
 /* #############   Navbar part  ############ */
 
 nav{
-    overflow: hidden;
     position: fixed;
     width: 100%;
     top: 0;
@@ -17,13 +16,19 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(194, 189, 189, 0.719);
-    min-height: 10vh;
+    background-color: rgba(194, 189, 189, 0.863);
+    min-height: 12vh;
     font-family: 'PT Serif', serif;
 }
 
 #header1{
     margin-right: 30%;
+}
+
+#header-img{
+    width: 60px;
+    height: auto;
+    margin: 5px 0 0 2px;
 }
 
 .nav-links{
@@ -43,7 +48,6 @@ nav{
     letter-spacing: 0.05rem;
     font-size: 1.1rem;
     font-weight: bold;
-
 }
 
 .burger{
@@ -79,11 +83,15 @@ nav{
     #header1{
         margin: 0;
     }
+    #header-img{
+        margin: 5px 0px 0 2px;
+    }
     .nav-links{
+        z-index: 1;
         position: absolute;
         right: 0px;
-        height: 90vh;
-        top: 10vh;
+        height: 88vh;
+        top: 12vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -96,6 +104,7 @@ nav{
 
     .burger{
         display: block;
+        margin-left: 50px;
     }
 
     .nav-links li{
@@ -146,16 +155,35 @@ nav{
 }
 
 
+/* ################# Page content ############## */
 
 .page-content{
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
 }
 
+.prdt-intro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.863);
+    width: 100%; 
+}
 
+#main-img{
+    width: 45%;
+    min-width: 320px;
+    height: auto;
+    margin: 10vh 0 0 0;
+}
 
+.prdt-descript{
+    color: white;
+}
 
 /* #############  Footer Part  ################### */
 
@@ -179,9 +207,10 @@ footer{
     margin: 2% 0 2% 5%;
 }
 
-.footer-logo{
-    width: 180px;
+#footer-logo{
+    width: 120px;
     height: auto;
+    margin-left: 5%;
 }
 
 .social-media{
@@ -220,6 +249,7 @@ footer{
 .footer-right p{
     font-size: 1.1rem;
     margin-left: 10px;
+    padding: 5px 0 5px 0;
 }
 
 .footer-border{
@@ -286,3 +316,5 @@ footer{
         text-align: center;
     }
 }
+
+/* ############## Footer end ################# */
