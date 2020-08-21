@@ -19,6 +19,7 @@ nav{
     background-color: rgba(194, 189, 189, 0.863);
     min-height: 12vh;
     font-family: 'PT Serif', serif;
+    z-index: 3;
 }
 
 #header1{
@@ -184,6 +185,78 @@ nav{
 .prdt-descript{
     color: white;
 }
+/* ############# Feature Part ################ */
+
+.prdt-feature{
+    background-color: rgba(0, 0, 0, 0.925);
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+}
+
+.img-feature-back{
+    height: 400px;
+    position: absolute;
+    z-index: 2;
+    top: 0%;
+    right: 10%;
+    transform: translate(0%, -10%);
+}
+
+.prdt-feature-right{
+    margin: 20px 40px 0 0;
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.prdt-feature-right img{
+    margin: 10px;
+}
+
+.img-spec{
+    width: 240px;
+    padding-top: 30px;
+}
+
+.img-note{
+    width: 230px;
+    padding-top: 20px;
+}
+
+.img-pen, .img-ink{
+    width: 250px;
+}
+
+.img-display{
+    width: 230px;
+}
+
+.img-file{
+    width: 220px;
+}
+
+.prdt-feature-bottom{
+    top: 45vh;
+    width: 100%;
+    background: white;
+    min-height: 40vh;
+    bottom: 0vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+
+/*  *************** */
 
 /* #############  Footer Part  ################### */
 
@@ -318,3 +391,26 @@ footer{
 }
 
 /* ############## Footer end ################# */
+
+
+@media screen and (max-width: 768px){
+
+.prdt-feature{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.img-feature-back{
+    height: 50%;
+}
+
+.prdt-feature-right{
+
+}
+
+.prdt-feature-right img{
+    margin: 5px;
+}
+}
