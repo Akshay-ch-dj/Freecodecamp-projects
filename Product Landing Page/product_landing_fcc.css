@@ -12,7 +12,7 @@ nav{
     top: 0;
 }
 
-.nav-bar{
+#nav-bar{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -87,7 +87,7 @@ nav{
     #header-img{
         margin: 5px 0px 0 2px;
     }
-    .nav-bar{
+    #nav-bar{
     min-height: 11vh;
     }
     .nav-links{
