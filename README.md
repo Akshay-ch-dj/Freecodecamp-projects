@@ -2,7 +2,7 @@
 
 ---
 
-Repo of projects done for freecodecamp.
+Repo of projects done for freecodecamp [web developer certificate][freecodecamp].
 
 1) 🗽 [Tribute Page Project][tribute].
 2) 📝 [Forum Page Project][forum].
@@ -15,5 +15,6 @@ Repo of projects done for freecodecamp.
 [forum]: https://codepen.io/akshaych/full/VwaYZdR
 [landing]: https://codepen.io/akshaych/full/VwaKKvd
 [documentation]: https://codepen.io/akshaych/full/XWdmNrJ
-[portfolio]: https://codepen.io/akshaych/full/VwaKKvd
+[portfolio]: https://akshaychdev.github.io/
 [responsiveness]: https://codepen.io/akshaych/full/rNLveBr
+[freecodecamp]: https://freecodecamp.org/certification/akshaych/responsive-web-design
